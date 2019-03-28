@@ -1,4 +1,5 @@
 @import "variables";
+@import "fonts";
 
 body, html{
   margin: 0;
@@ -6,4 +7,45 @@ body, html{
   font-family: $font;
 }
 
+.header-block{
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 80px;
+}
+.content-block{
+  width: 96%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+section{
+  width: 100%;
+  min-height: 100vh;
+}
+
+img{
+  max-width: 100%;
+}
+
+#logo-container{
+  position: fixed;
+  width: 50%;
+  max-width: 200px;
+  top: 5vh;
+  left: 50px;
+}
+
+.invite-info{
+  border: 2px solid #fff;
+  padding: 0 14px;
+  margin-top: -4vh;
+  margin-bottom: 20px;
+}
+
 @import "easter-sunday";
+@import "good-file";
