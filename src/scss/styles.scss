@@ -1,51 +1,101 @@
 @import "variables";
 @import "fonts";
 
-body, html{
+body,
+html {
   margin: 0;
   padding: 0;
   font-family: $font;
 }
 
-.header-block{
-  width: 100%;
+.header-block {
+  width: 96%;
   text-align: center;
-  margin-top: 0;
-  padding-top: 80px;
+  padding-top: 5vh;  
+  margin: 0 auto 3.5vh;
 }
-.content-block{
+.header-img{
+  max-width: 450px;
+  margin: auto;
+}
+
+.content-block {
   width: 96%;
   max-width: 1280px;
   margin: 0 auto;
-  display: flex;  
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-section{
+section {
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-img{
+img {
   max-width: 100%;
 }
 
-#logo-container{
+.mobile-only{
+  display: none;
+}
+
+#logo-container {
   position: fixed;
   width: 50%;
   max-width: 200px;
   top: 5vh;
   left: 50px;
+  z-index: 9999;
 }
 
-.invite-info{
+a{
+  color: inherit;
+  text-decoration: underline;
+  &:hover{
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.invite-info {
   border: 2px solid #fff;
-  padding: 0 14px;
-  margin-top: -4vh;
+  padding: 14px;
   margin-bottom: 20px;
 }
 
+.detail-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+
+  .details {
+    width: 50%;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .details-2 {
+    text-align: right;
+  }
+
+  .deets-title {
+    font-size: calc(16px + 1vw);
+  }
+}
+
 @import "easter-sunday";
-@import "good-file";
+@import "good-friday";
+@import "egg-hunt";
+@import "church-info";
+
+@import "mobile";

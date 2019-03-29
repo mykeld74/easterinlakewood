@@ -1,8 +1,14 @@
 #easter-sunday{
   background: radial-gradient(ellipse at center, #ffd33f 0%,#ef8e1b 100%) fixed #ef8e1b;
-  color: #fff;
-  h1{
-    text-shadow: #777 2px 2px 3px;
+  color: $black;
+  position: absolute;
+  z-index: 1;
+  &.sticky{
+    position: fixed;
+    bottom: 0;
+  }
+  .invite-info{
+    border-color: $black;
   }
 }
 

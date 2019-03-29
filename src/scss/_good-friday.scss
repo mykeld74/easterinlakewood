@@ -1,0 +1,15 @@
+#good-friday{
+  background: $black;
+  color: #fff;
+  position: absolute;
+  z-index: 100;
+  &.sticky{
+    position: fixed;
+    bottom: 0;
+  }
+  .detail-container{
+    .details{
+      width: 100%;
+    }
+  }
+}
