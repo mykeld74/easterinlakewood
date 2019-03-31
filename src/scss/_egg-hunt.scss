@@ -1,5 +1,17 @@
 #egg-hunt{
+  background: radial-gradient(ellipse at center, #a3d892 0%,#5aaa77 100%) fixed #5aaa77;
   position: absolute;
   z-index: 200;
-  display: none;
+  &.sticky{
+    position: fixed;
+    bottom: 0;
+  }
+  .invite-info{
+    border-color: $black;
+  }
+  .detail-container{
+    .details{
+      width: 100%;
+    }
+  }
 }

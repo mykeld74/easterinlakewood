@@ -67,6 +67,7 @@ a{
   border: 2px solid #fff;
   padding: 14px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .detail-container {
@@ -92,6 +93,8 @@ a{
     font-size: calc(16px + 1vw);
   }
 }
+
+
 
 @import "easter-sunday";
 @import "good-friday";
