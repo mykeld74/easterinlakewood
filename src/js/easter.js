@@ -16,7 +16,10 @@ $(document).ready(function () {
       stickFriday = easterHeight + fridayHeight - $(window).height();
       stickEgg = easterHeight + fridayHeight + eggHuntHeight - $(window).height();
   });
-
+  $('.hamburger').on('click', function(){
+    $('.hamburger').toggleClass('is-active');
+    $('#nav').toggleClass('is-visible');
+  })
   console.log(stickEaster);
   console.log(stickFriday);
 
@@ -48,9 +51,6 @@ $(document).ready(function () {
     } else if (window.pageYOffset < stickEgg && window.pageYOffset > stickFriday) {
       $('#egg-hunt').css('top', easterHeight + fridayHeight + 'px').removeClass('sticky');
     }
-
-
-
   }
 
 });
