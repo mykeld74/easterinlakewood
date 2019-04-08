@@ -4,19 +4,44 @@ $(document).ready(function () {
     eggHuntHeight = $('#egg-hunt').height(),
     stickEaster = easterHeight - $(window).height(),
     stickFriday = easterHeight + fridayHeight - $(window).height();
-    stickEgg = easterHeight + fridayHeight + eggHuntHeight - $(window).height();
+  stickEgg = easterHeight + fridayHeight + eggHuntHeight - $(window).height();
 
-    $('#easter-sunday').css('z-index', '1');
+  $('#easter-sunday').css('z-index', '1');
 
   window.addEventListener('resize', function () {
-      easterHeight = $('#easter-sunday').height(),
+    easterHeight = $('#easter-sunday').height(),
       fridayHeight = $('#good-friday').height(),
       eggHuntHeight = $('#egg-hunt').height(),
       stickEaster = easterHeight - $(window).height(),
       stickFriday = easterHeight + fridayHeight - $(window).height();
-      stickEgg = easterHeight + fridayHeight + eggHuntHeight - $(window).height();
+    stickEgg = easterHeight + fridayHeight + eggHuntHeight - $(window).height();
   });
-  $('.hamburger').on('click', function(){
+
+  $('#easter-btn').on('click', function () {
+    // $('html,body').animate({
+    //   scrollTop: $('#easter-sunday').offset().top + 1
+    // }, 500);
+    $('#good-friday').css('top', easterHeight);
+    $('#egg-hunt').css('top', easterHeight + fridayHeight);
+    $('#church-info').css('top', easterHeight + fridayHeight + eggHuntHeight);
+  })
+  $('#friday-btn').on('click', function () {
+    $('html,body').animate({
+      scrollTop: $('#good-friday').offset().top + 1
+    }, 500)
+  })
+  $('#egg-hunt-btn').on('click', function () {
+    $('html,body').animate({
+      scrollTop: $('#egg-hunt').offset().top + 1
+    }, 500)
+  })
+  $('#church-info-btn').on('click', function () {
+    $('html,body').animate({
+      scrollTop: $('#church-info').offset().top + 1
+    }, 500)
+  })
+
+  $('.hamburger').on('click', function () {
     $('.hamburger').toggleClass('is-active');
     $('#nav').toggleClass('is-visible');
   })
