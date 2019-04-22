@@ -17,10 +17,6 @@ $(document).ready(function () {
       stickEgg = easterHeight + fridayHeight + eggHuntHeight - $(window).height();
   });
 
-  console.log(stickEaster);
-  console.log(stickFriday);
-
-
   $('#good-friday').css('top', easterHeight + 'px');
   $('#egg-hunt').css('top', easterHeight + fridayHeight + 'px');
   $('#church-info').css('top', easterHeight + fridayHeight + eggHuntHeight + 'px');

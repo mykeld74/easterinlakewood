@@ -9,18 +9,18 @@ html {
 }
 
 .header-block {
-  width: 96%;
+  width: 80%;
   text-align: center;
   padding-top: 5vh;  
   margin: 0 auto 3.5vh;
 }
 .header-img{
-  max-width: 450px;
+  max-width: 300px;
   margin: auto;
 }
 
 .content-block {
-  width: 96%;
+  width: 94%;
   max-width: 1280px;
   margin: 0 auto;
   display: flex;
@@ -97,8 +97,8 @@ a{
 
 
 @import "easter-sunday";
-@import "good-friday";
-@import "egg-hunt";
-@import "church-info";
+// @import "good-friday";
+// @import "egg-hunt";
+// @import "church-info";
 
 @import "mobile";

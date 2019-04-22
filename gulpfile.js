@@ -1,4 +1,4 @@
-var gulp = require("gulp"),
+const gulp = require("gulp"),
     sass = require("gulp-sass"),
     postcss = require("gulp-postcss"),
     autoprefixer = require("autoprefixer"),
@@ -6,9 +6,11 @@ var gulp = require("gulp"),
     sourcemaps = require("gulp-sourcemaps"),
     browserSync = require("browser-sync").create(),
     imagemin = require('gulp-imagemin'),
-    del = require('del');
+    del = require('del'),
+    babel = require('gulp-babel'),
+    concat = require('gulp-concat');
 
-var paths = {
+const paths = {
     styles: {
         src: "src/scss/*.scss",
         dest: "src/css"
@@ -45,15 +47,23 @@ function watch() {
 }
 
 function copy() {
-    return gulp.src('./src/**')
-        .pipe(gulp.dest('./dist/'));
+    return gulp.src('src/**/**.*')
+        .pipe(gulp.dest('dist/'));
 };
 
 function clean(){
     return del('dist');    
 }
 function cleanSASS(){
-    return del('dist/scss');    
+    return del(['dist/scss', 'dist/js']);    
+}
+
+function jsBabel(){
+    return gulp.src('src/js/easter.js')
+    .pipe(babel({
+        presets: ['@babel/env']
+    }))
+    .pipe(gulp.dest('dist/js/'))
 }
 
 
@@ -63,12 +73,13 @@ exports.style = style;
 exports.copy = copy;
 exports.clean = clean;
 exports.cleanSASS = cleanSASS;
+exports.jsBabel = jsBabel;
 
 /*
  * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
  */
-var build = gulp.parallel(style, watch);
-var prod = gulp.series(clean, copy, cleanSASS);
+const build = gulp.parallel(style, watch);
+const prod = gulp.series(clean, copy, cleanSASS, jsBabel);
 
 gulp.task('default', build);
 gulp.task('production', prod);
