@@ -9,18 +9,23 @@ html {
 }
 
 .header-block {
-  width: 96%;
+  width: calc(100% - 30px);
+  max-width: 1170px;
   text-align: center;
-  padding-top: 5vh;  
+  padding-top: 5vh;
   margin: 0 auto 3.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
-.header-img{
-  max-width: 450px;
+.header-img {
+  width: 45%;
+  max-width: 350px;
   margin: auto;
 }
 
 .content-block {
-  width: 96%;
+  width: calc(100% - 30px);
   max-width: 1280px;
   margin: 0 auto;
   display: flex;
@@ -32,6 +37,7 @@ html {
 section {
   width: 100%;
   min-height: 100vh;
+  padding-bottom: 50px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -41,7 +47,7 @@ img {
   max-width: 100%;
 }
 
-.mobile-only{
+.mobile-only {
   display: none;
 }
 
@@ -54,10 +60,10 @@ img {
   z-index: 9999;
 }
 
-a{
+a {
   color: inherit;
   text-decoration: underline;
-  &:hover{
+  &:hover {
     cursor: pointer;
     text-decoration: none;
   }
@@ -84,7 +90,11 @@ a{
       margin: 0;
     }
   }
-
+  .easterDetails {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid #fff;
+  }
   .details-2 {
     text-align: right;
   }
@@ -93,8 +103,6 @@ a{
     font-size: calc(16px + 1vw);
   }
 }
-
-
 
 @import "easter-sunday";
 @import "good-friday";
