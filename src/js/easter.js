@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var easterHeight = $("#easter-sunday").height(),
     fridayHeight = $("#good-friday").height(),
     eggHuntHeight = $("#egg-hunt").height(),
@@ -7,7 +7,7 @@ $(document).ready(function() {
 
   $("#easter-sunday").css("z-index", "1");
 
-  window.addEventListener("resize", function() {
+  window.addEventListener("resize", function () {
     (easterHeight = $("#easter-sunday").height()),
       (fridayHeight = $("#good-friday").height()),
       (eggHuntHeight = $("#egg-hunt").height()),
@@ -21,7 +21,7 @@ $(document).ready(function() {
   $("#egg-hunt").css("top", easterHeight + "px");
   // $("#church-info").css("top", easterHeight + eggHuntHeight + "px");
 
-  window.onscroll = function() {
+  window.onscroll = function () {
     makeSticky();
     console.log(window.pageYOffset);
   };
