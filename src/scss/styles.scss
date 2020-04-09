@@ -75,7 +75,19 @@ a {
   margin-bottom: 20px;
   width: 100%;
 }
-
+hr {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 30%,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  width: 100%;
+  border: none;
+  margin: 15px 0;
+}
 .detail-container {
   width: 90%;
   margin: auto;
@@ -108,5 +120,4 @@ a {
 @import "good-friday";
 @import "egg-hunt";
 @import "church-info";
-
 @import "mobile";

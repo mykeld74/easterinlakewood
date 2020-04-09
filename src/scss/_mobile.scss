@@ -1,21 +1,19 @@
-@media(max-width: 801px){
-  #logo-container{
+@media (max-width: 801px) {
+  #logo-container {
     display: none;
   }
-  .detail-container{
+  .detail-container {
     flex-wrap: wrap;
-    .details{
+    .details {
       width: 100%;
-      
     }
-    .details-2{
+    .details-2 {
       margin-top: 20px;
       text-align: left;
     }
   }
-  .mobile-only{
+  .mobile-only {
     display: block;
     max-width: 225px;
-    
   }
 }
